@@ -35,6 +35,9 @@ h2{
 
 
 /*Acá comienza el pie de pagina*/
+footer{
+    height: 150px;
+}
 .pie{
     text-align: center;
     background: url(imagenes/pie.jpg);
@@ -54,15 +57,15 @@ h2{
     font-size: 13px;
     margin: 20px;
 }
+.contacto{
+    display: flex;
+}
 .espacio-link{
-    width: 8%;
+    width: 5%;
     background: #FFFFFF;
-    display: inline-block;
     border: 4px solid black;
     border-radius: 10px;
-    position: relative;
-    left: 25%;
-    bottom: 100px;
+    transition: 0.3s;
 
 }
 .link{
@@ -70,5 +73,14 @@ h2{
 }
 
 .espacio-link:hover{
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+
+.espacio-instagram{
+    width: 5%;
+    background: #FFFFFF;
+    border: 4px solid black;
+    border-radius: 10px;
 
 }
