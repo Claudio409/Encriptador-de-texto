@@ -11,6 +11,7 @@ body{
     width: 940px;
     position: relative;
     margin: 0 auto;
+    opacity: 0.92;
 }
 .logo{
    width: 5%;
@@ -36,7 +37,7 @@ h2{
 
 /*Acá comienza el pie de pagina*/
 footer{
-    height: 150px;
+    height: 180px;
 }
 .pie{
     text-align: center;
@@ -47,7 +48,7 @@ footer{
 .logopie{
     display: inline-block;
     position: relative;
-    top:30px;
+    top:30%;
 }
 .piee{
     width: 15%;
@@ -59,28 +60,33 @@ footer{
 }
 .contacto{
     display: flex;
+    max-width: 12%;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    left: 60%;
+    bottom: 55%;
 }
-.espacio-link{
-    width: 5%;
+
+
+.contacto div{
+    width: 70%;
     background: #FFFFFF;
     border: 4px solid black;
     border-radius: 10px;
     transition: 0.3s;
-
+    box-sizing: border-box;
 }
+.espacio-link:hover,.espacio-instagram:hover, .espacio-github:hover{
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+/*acá para el boton linkedin*/
 .link{
     width: 100%;
 }
 
-.espacio-link:hover{
-    opacity: 0.6;
-    transform: scale(1.1);
-}
-
+/*acá para el boton de instagram*/
 .espacio-instagram{
-    width: 5%;
-    background: #FFFFFF;
-    border: 4px solid black;
-    border-radius: 10px;
-
+    margin: 8px 0 8px 0;
 }
