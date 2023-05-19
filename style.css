@@ -33,6 +33,33 @@ h2{
 }
 
 
+/*Estilo del text-area*/
+
+textarea{
+    font-family: 'Nunito', sans-serif;
+    resize: none;
+    border: none;
+    background: #F3F5FC;
+    margin: 30px 0 0 200px;
+    font-size: 25px;
+    font-weight: bold;
+    color: darkgreen;
+    text-transform: lowercase;
+}
+
+#mensaje::placeholder{
+    font-family: 'Oswald', sans-serif;
+    text-transform: none;
+    font-size: 30px;
+    color: darkblue;
+}
+
+#mensaje:focus{
+    outline: none;
+}
+
+
+
 
 
 /*Acá comienza el pie de pagina*/
