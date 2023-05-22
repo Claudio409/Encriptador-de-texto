@@ -34,13 +34,22 @@ h2{
 
 
 /*Estilo del text-area*/
+main{
+    width: 940px;
+    margin: 0 auto;
+}
+.texto p{
+    font-size: 12px;
+    margin: 0 0 0 50px;
+    color: #b8860b
+}
 
 textarea{
     font-family: 'Nunito', sans-serif;
     resize: none;
     border: none;
     background: #F3F5FC;
-    margin: 30px 0 0 200px;
+    margin: 30px 0 0 50px;
     font-size: 25px;
     font-weight: bold;
     color: darkgreen;
@@ -63,10 +72,32 @@ textarea{
     font-size: 20px;
 }
 
-.texto p{
-    font-size: 15px;
-    margin: 0 0 0 200px;
+.boton-encriptar{
+    display: inline-block;
+    width: 25%;
+    height: 70px;
+    margin: 10px 0;
 }
+
+.Encriptar{
+    font-family: 'Oswald', sans-serif;
+    width: 70%;
+    height: 90%;
+    position: relative;
+    left: 25%;
+    border-radius: 10px;
+    background-color: #0A3871;
+    /*Estilo del texto*/
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.Encriptar:hover{
+    transition: 500ms;
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
 
 
 
@@ -94,6 +125,7 @@ footer{
     font-size: 13px;
     margin: 20px;
 }
+/*Estilos de botones de contacto*/
 .contacto{
     display: flex;
     max-width: 12%;
