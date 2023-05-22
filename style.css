@@ -38,13 +38,16 @@ main{
     width: 940px;
     margin: 0 auto;
 }
-.texto p{
+.texto-encriptado, .Texto-desencriptado{
+    display: inline-block;
+}
+.texto-encriptado p{
     font-size: 12px;
     margin: 0 0 0 50px;
     color: #b8860b
 }
 
-textarea{
+#mensaje{
     font-family: 'Nunito', sans-serif;
     resize: none;
     border: none;
@@ -109,7 +112,12 @@ textarea{
     background: #D8DFE8;
     color: #0A3871;
 }
-
+/*aca comienza el texto-desencritado*/
+.Texto-desencriptado{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 
 
