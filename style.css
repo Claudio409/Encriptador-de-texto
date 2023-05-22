@@ -72,30 +72,42 @@ textarea{
     font-size: 20px;
 }
 
-.boton-encriptar{
+.botones-texto{
+    display: flex;
+}
+
+.boton-encriptar, .boton-desencriptar{
     display: inline-block;
     width: 25%;
     height: 70px;
     margin: 10px 0;
 }
 
-.Encriptar{
+.Encriptar,.Desencriptar{
     font-family: 'Oswald', sans-serif;
+    position: relative;
     width: 70%;
     height: 90%;
-    position: relative;
-    left: 25%;
-    border-radius: 10px;
-    background-color: #0A3871;
-    /*Estilo del texto*/
-    color: #FFFFFF;
+    border-radius: 15px;
     font-size: 18px;
 }
 
-.Encriptar:hover{
+.Encriptar{
+    left: 25%;
+    background-color: #0A3871;
+    /*Estilo del texto*/
+    color: #FFFFFF;
+}
+
+.Encriptar:hover, .Desencriptar:hover{
     transition: 500ms;
     transform: scale(1.05);
-    opacity: 0.8;
+    opacity: 0.9;
+}
+
+.Desencriptar{
+    background: #D8DFE8;
+    color: #0A3871;
 }
 
 
