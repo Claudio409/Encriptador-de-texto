@@ -66,7 +66,7 @@ main{
     color: darkblue;
 }
 
-#mensaje:focus{
+#mensaje-desencriptado, #mensaje:focus { 
     outline: none;
 }
 
@@ -115,11 +115,39 @@ main{
 /*aca comienza el texto-desencritado*/
 .Texto-desencriptado{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 110px;
+    right: 150px;
+    border-radius: 30px;
+    margin: 30px 0;
+    box-shadow: 10px 10px 40px black;
 }
 
+#mensaje-desencriptado{
+    resize: none;
+    border: none;
+    border-radius: 30px;
+}
+#mensaje-desencriptado::placeholder{
+    font-family: 'Oswald', sans-serif;
+    text-transform: none;
+    font-size: 30px;
+    text-align: center;
+    color: #343A40;
+}
 
+.muñeco{
+    display: inline-block;
+    width: 80%;
+    position: absolute;
+    top: 100px;
+    right: 35px;
+}
+.Texto-desencriptado p{
+    display: inline;
+    position: absolute;
+    top:0;
+    right: 0;
+}
 
 
 /*Acá comienza el pie de pagina*/
