@@ -142,12 +142,27 @@ main{
     top: 100px;
     right: 35px;
 }
-.Texto-desencriptado p{
-    display: inline;
+.aviso{
+    font-family: 'Nunito', sans-serif;
+    display: inline-block;
+    display: 20px;
     position: absolute;
-    top:0;
+    top:370px;
     right: 0;
+    text-align: center;
 }
+
+.texto-arriba{
+    font-size: 30px;
+    color: #343A40;
+    font-weight: bold;
+}
+
+.texto-abajo{
+    color: #495057;
+    margin: 15px 0;
+}
+
 
 
 /*Acá comienza el pie de pagina*/
