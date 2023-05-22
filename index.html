@@ -17,7 +17,7 @@
                 <h2 class="titulo">Encriptador</h2>
             </div>
         </header>
-        
+
         <main>
             <div class="texto-encriptado">
                 <textarea cols="35" rows="15" name="mensaje" id="mensaje"  required placeholder="Ingrese el texto aquí"></textarea>
@@ -25,21 +25,23 @@
             </div>
             <section class="botones-texto">
                 <div class="boton-encriptar">
-                    <input type="submit" value="Encriptar" class="Encriptar">
+                    <input type="submit" value="Encriptar" class="Encriptar" id="encriptar">
                 </div>
                 <div class="boton-desencriptar">
-                    <input type="submit" value="Desencriptar" class="Desencriptar">
+                    <input type="submit" value="Desencriptar" class="Desencriptar" id="desencriptar">
                 </div>
             </section>
             <section class="Texto-desencriptado">
                 <textarea cols="45" rows="40" name="mensaje" id="mensaje-desencriptado" readonly></textarea>
-                <img src="imagenes/muñeco.png" class="muñeco">
-                <div class="aviso">
-                    <p class="texto-arriba">Ningún mensaje fue encontrado</p>
-                    <p class="texto-abajo">Ingresa el texto que desees encriptar o desencriptar</p>
-                </div>
+                <section id="avisos">
+                    <img src="imagenes/muñeco.png" class="muñeco">
+                    <div class="aviso">
+                        <p class="texto-arriba">Ningún mensaje fue encontrado</p>
+                        <p class="texto-abajo">Ingresa el texto que desees encriptar o desencriptar</p>
+                    </div>
+                </section>
                 <div class="boton-copiar">
-                    <input type="submit" value="copiar" class="copiar"></button>
+                    <input type="submit" value="copiar" class="copiar" id="copiar"></button>
                 </div>
             </section>
         </main>
