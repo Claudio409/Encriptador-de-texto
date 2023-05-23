@@ -32,8 +32,8 @@ encriptar.addEventListener('input',function(){ //realiza un evento
 
 
 botonencriptador.addEventListener('click', function(){
-    let texto1 = encriptar.value;
-    let texto2 = "  "+texto1
+    let texto1 = codificar();
+    let texto2 = "  "+texto1;
     if (verificador){
                 avisos.style.display="none";
                 copiar.style.display="inline-block";
@@ -51,3 +51,27 @@ desencriptar.addEventListener('click',function(){
     return textoDesencriptado.value = texto2;
 })
 
+
+function codificar(){
+    let texto1 = encriptar.value;
+    let remplazo = /[aeiou]/g;
+    
+    let texto2 = texto1.replace(remplazo, function(coincide){
+        if (coincide == 'a'){
+            return 'ai';
+        }
+        if(coincide=='e'){
+            return 'enter';
+        }
+        if(coincide=='i'){
+            return 'imes';
+        }
+        if (coincide == 'o'){
+            return 'ober';
+        }
+        if(coincide=='u'){
+            return 'ufat'
+        }
+    });
+    return texto2;
+};
