@@ -42,12 +42,12 @@ botonencriptador.addEventListener('click', function(){
 });
 
 desencriptar.addEventListener('click',function(){
+    let texto1 = decodificar();
+    let texto2 = "  "+texto1
     if (verificador){
         avisos.style.display="none";
         copiar.style.display="inline-block";
     }
-    let texto1 = encriptar.value;
-    let texto2 = "  "+texto1
     return textoDesencriptado.value = texto2;
 })
 
@@ -71,6 +71,29 @@ function codificar(){
         }
         if(coincide=='u'){
             return 'ufat'
+        }
+    });
+    return texto2;
+};
+
+function decodificar(){
+    let texto = encriptar.value;
+    let codigo = /ai|enter|imes|ober|ufat/g;
+    let texto2=texto.replace(codigo, function(coincide){
+        if(coincide=='ai'){
+            return 'a';
+        }
+        if(coincide=='enter'){
+            return 'e';
+        }
+        if (coincide == 'imes'){
+            return 'i';
+        }
+        if (coincide=='ober'){
+            return 'o';
+        }
+        if (coincide=='ufat'){
+            return 'u';
         }
     });
     return texto2;
