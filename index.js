@@ -51,7 +51,7 @@ desencriptar.addEventListener('click',function(){
     return textoDesencriptado.value = texto2;
 })
 
-
+/*Funcion codificar del boton encriptar*/
 function codificar(){
     let texto1 = encriptar.value;
     let remplazo = /[aeiou]/g;
