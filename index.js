@@ -102,5 +102,7 @@ function decodificar(){
 
 copiar.addEventListener('click', function(){
     let texto = textoDesencriptado.value;
+    let vacio = /  /g; //aquí se especifica que busque los dobles espacios
+    texto = texto.replace(vacio, "");
     navigator.clipboard.writeText(texto);
 });
