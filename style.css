@@ -123,16 +123,12 @@ main{
 }
 
 #mensaje-desencriptado{
+    font-family: 'Pangolin', cursive;
     resize: none;
     border: none;
     border-radius: 30px;
-}
-#mensaje-desencriptado::placeholder{
-    font-family: 'Oswald', sans-serif;
-    text-transform: none;
-    font-size: 30px;
-    text-align: center;
-    color: #343A40;
+    font-size: 20px;
+    color:#0A3871
 }
 
 .muñeco{
