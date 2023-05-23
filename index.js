@@ -8,6 +8,7 @@ var avisos = llamar("avisos");
 var copiar = llamar("copiar")
 var desencriptar = llamar("desencriptar")
 var textoDesencriptado= llamar('mensaje-desencriptado')
+var copiar = llamar('copiar');
 var verificador = false; 
 
 //Para que el textarea solo admita minusculas 
@@ -98,3 +99,8 @@ function decodificar(){
     });
     return texto2;
 };
+
+copiar.addEventListener('click', function(){
+    let texto = textoDesencriptado.value;
+    navigator.clipboard.writeText(texto);
+});
