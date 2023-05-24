@@ -279,3 +279,98 @@ footer{
 .borrar,.copiar,.Encriptar,.Desencriptar, .pegar{
     cursor: pointer;
 }
+
+/*Acá comienza los codigos para el celular*/
+@media screen and (max-width:450px){
+    .diseñoArriba, main{
+        width: auto;
+    }
+    #mensaje{
+        width: 90%;
+        height: 400px;
+        margin: 10px 0 0 20px;
+    }
+    .logo{
+        width: 10%;
+        margin: 0 10px;
+    }
+    .titulo{
+        top:37%;
+    }
+    .boton-borrar{
+        width: 20%;
+    }
+    .texto-encriptado p{
+        margin: 0 0 0 4%;
+    }
+    .botones-texto{
+        display: block;
+        position: relative;
+        bottom: 36px;
+    }
+    .boton-encriptar, .boton-desencriptar{
+        width: 100%;
+        margin: 5px 0;
+    }
+    .Encriptar, .Desencriptar{
+        left: 0;
+        width: 92%;
+        margin: 0 4%;
+    }
+    .Encriptar:hover, .Desencriptar:hover, .borrar:hover, .pegar:hover{
+        transition: none;
+        transform: none;
+        opacity: none;
+    }
+    .Encriptar:active, .Desencriptar:active, .borrar:active, .pegar:active{
+        transition: 600ms;
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    .Texto-desencriptado{
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 100%;
+        box-shadow: none;
+    }
+    #mensaje-desencriptado{
+        width: 90%;
+        height: 200px;
+        margin: 2em 5%;
+        box-shadow: 5px 8px 5px gray,-5px -8px 5px gray;
+        border: 50px;
+        
+    }
+    .muñeco{
+        display: none;
+    }
+    .boton-pegar{
+        float: none;
+        position: absolute;
+        top:15.6%;
+        right: 0;
+        left: 134px;
+    }
+    .pegar{
+        width: 38%;
+        font-size: 15px;
+        padding: 4px;
+    }
+    .aviso{
+        top: 28%;
+    }
+    .texto-abajo{
+        margin: 22px 55px;
+    }
+    .texto-arriba{
+        margin: 0 10px;
+    }
+    .contacto{
+        left: 76%;
+    }
+    .contacto div{
+        width: 200%;
+    }
+}
