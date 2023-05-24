@@ -9,6 +9,7 @@ var copiar = llamar("copiar")
 var desencriptar = llamar("desencriptar")
 var textoDesencriptado= llamar('mensaje-desencriptado')
 var copiar = llamar('copiar');
+var pegar = llamar('pegar');
 var verificador = false; 
 
 //Para que el textarea solo admita minusculas 
@@ -27,6 +28,7 @@ encriptar.addEventListener('input',function(){ //realiza un evento
     if (encriptar.value==""){
         avisos.style.display="inline-block";
         copiar.style.display="none";
+        pegar.style.display="inline-block";
         return textoDesencriptado.value = texto;
     }
 });
@@ -106,3 +108,17 @@ copiar.addEventListener('click', function(){
     texto = texto.replace(vacio, "");
     navigator.clipboard.writeText(texto);
 });
+
+//Funcionalidad del boton pegar
+encriptar.addEventListener('focus',function(focus){
+    if (focus){
+        pegar.style.display="none";
+    }
+});
+
+
+pegar.addEventListener('click', async function(){
+    const texto = await navigator.clipboard.readText();
+    encriptar.value = texto;
+});
+
