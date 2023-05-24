@@ -10,6 +10,7 @@ var desencriptar = llamar("desencriptar")
 var textoDesencriptado= llamar('mensaje-desencriptado')
 var copiar = llamar('copiar');
 var pegar = llamar('pegar');
+var borrar = llamar('borrar');
 var verificador = false; 
 
 //Para que el textarea solo admita minusculas 
@@ -125,3 +126,8 @@ pegar.addEventListener('click', async function(){
     pegar.style.display="none";
 });
 
+//comandos para borrar
+borrar.addEventListener('click', function(){
+    encriptar.value="";
+    pegar.style.display="inline-block";
+});
