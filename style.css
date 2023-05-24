@@ -358,12 +358,12 @@ footer{
     .boton-pegar{
         float: none;
         position: absolute;
-        top:15.6%;
+        top:108.5px;
         right: 0;
         left: 134px;
     }
     .pegar{
-        width: 38%;
+        width: 70px;
         font-size: 15px;
         padding: 4px;
     }
