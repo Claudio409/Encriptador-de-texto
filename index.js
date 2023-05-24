@@ -36,12 +36,11 @@ encriptar.addEventListener('input',function(){ //realiza un evento
 
 botonencriptador.addEventListener('click', function(){
     let texto1 = codificar();
-    let texto2 = "  "+texto1;
     if (verificador){
                 avisos.style.display="none";
                 copiar.style.display="inline-block";
     }
-    return textoDesencriptado.value = texto2;
+    return textoDesencriptado.value = texto1;
 });
 
 desencriptar.addEventListener('click',function(){

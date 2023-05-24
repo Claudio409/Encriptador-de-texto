@@ -131,20 +131,25 @@ main{
 /*aca comienza el texto-desencritado*/
 .Texto-desencriptado{
     position: absolute;
+    width: 300px;
+    height: 600px;
     top: 110px;
     right: 150px;
     border-radius: 30px;
     margin: 30px 0;
-    box-shadow: 10px 8px 20px #F3F5FC;
+    background: #F3F5FC;
 }
 
 #mensaje-desencriptado{
     font-family: 'Pangolin', cursive;
+    width: 90%;
+    height: 90%;
     resize: none;
     border: none;
-    border-radius: 30px;
     font-size: 20px;
-    color:#0A3871
+    margin: 4% 2% 0 6%;
+    color:#0A3871;
+    background: #F3F5FC;
 }
 
 .muñeco{
@@ -180,8 +185,8 @@ main{
     width: 50%;
     height: 40px;
     position: absolute;
-    top: 527px;
-    left: 90px;
+    top: 559px;
+    left: 82px;
 }
 .copiar{
     width: 100%;
@@ -329,18 +334,21 @@ footer{
     }
     .Texto-desencriptado{
         position: relative;
+        width: 90%;
+        height: 250px;
         top: 0;
         right: 0;
-        margin: 0 auto;
-        width: 100%;
+        margin: 5% 5% 3em 5%;
         box-shadow: none;
+        background: #F3F5FC;
     }
     #mensaje-desencriptado{
         width: 90%;
-        height: 200px;
-        margin: 2em 5%;
-        box-shadow: 5px 8px 5px gray,-5px -8px 5px gray;
-        border: 50px;
+        height: 80%;
+        margin: 2% 5% 0 5%;
+       /* box-shadow: 5px 8px 5px gray,-5px -8px 5px gray;*/
+        /*border: 50px;*/
+        background: #F3F5FC;
         
     }
     .muñeco{
@@ -366,11 +374,16 @@ footer{
     }
     .texto-arriba{
         margin: 0 10px;
+        font-weight: bold;
     }
     .contacto{
         left: 76%;
     }
     .contacto div{
         width: 200%;
+    }
+    .boton-copiar{
+        left: 25%;
+        top:82%;
     }
 }
