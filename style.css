@@ -312,7 +312,7 @@ footer{
     .botones-texto{
         display: block;
         position: relative;
-        bottom: 36px;
+        bottom: -px;
     }
     .boton-encriptar, .boton-desencriptar{
         width: 100%;
