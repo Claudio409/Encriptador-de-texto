@@ -138,6 +138,7 @@ main{
     border-radius: 30px;
     margin: 30px 0;
     background: #F3F5FC;
+    box-shadow: 9px 3px 7px #F3F5FC;
 }
 
 #mensaje-desencriptado{
