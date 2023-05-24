@@ -28,7 +28,6 @@ encriptar.addEventListener('input',function(){ //realiza un evento
     if (encriptar.value==""){
         avisos.style.display="inline-block";
         copiar.style.display="none";
-        pegar.style.display="inline-block";
         return textoDesencriptado.value = texto;
     }
 });
@@ -111,14 +110,18 @@ copiar.addEventListener('click', function(){
 
 //Funcionalidad del boton pegar
 encriptar.addEventListener('focus',function(focus){
-    if (focus){
-        pegar.style.display="none";
-    }
+    pegar.style.display="none";
 });
 
+encriptar.addEventListener('blur', function(){
+    if (encriptar.value==''){
+        pegar.style.display="inline-block";
+    }
+})
 
 pegar.addEventListener('click', async function(){
     const texto = await navigator.clipboard.readText();
     encriptar.value = texto;
+    pegar.style.display="none";
 });
 
