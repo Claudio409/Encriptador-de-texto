@@ -29,7 +29,10 @@ encriptar.addEventListener('input',function(){ //realiza un evento
     if (encriptar.value==""){
         avisos.style.display="inline-block";
         copiar.style.display="none";
+        pegar.style.display="inline-block";
         return textoDesencriptado.value = texto;
+    }else{
+        pegar.style.display="none";
     }
 });
 
@@ -128,5 +131,8 @@ pegar.addEventListener('click', async function(){
 //comandos para borrar
 borrar.addEventListener('click', function(){
     encriptar.value="";
+    textoDesencriptado.value="";
+    avisos.style.display="inline-block";
+    copiar.style.display="none";
     pegar.style.display="inline-block";
 });

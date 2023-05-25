@@ -118,11 +118,19 @@ main{
     color: #FFFFFF;
 }
 
-.Encriptar:hover, .Desencriptar:hover, .copiar:hover{
+.Encriptar:hover, .Desencriptar:hover{
     transition: 500ms;
     transform: scale(1.05);
     opacity: 0.9;
 }
+.copiar:hover{
+    transition: 300ms;
+    transform: scale(1.05);
+    opacity: 0.9;
+    background: #343A40; 
+    color: white;
+}
+
 
 .Desencriptar{
     background: #D8DFE8;
@@ -323,15 +331,27 @@ footer{
         width: 92%;
         margin: 0 4%;
     }
-    .Encriptar:hover, .Desencriptar:hover, .borrar:hover, .pegar:hover{
+    .Encriptar:hover, .Desencriptar:hover, .borrar:hover, .pegar:hover, .copiar:hover{
         transition: none;
         transform: none;
         opacity: none;
     }
-    .Encriptar:active, .Desencriptar:active, .borrar:active, .pegar:active{
-        transition: 600ms;
+    .copiar:hover{
+        background: none;
+        color: #0A3871;
+    }
+    .Encriptar:active, .Desencriptar:active{
+        transition: none;
         transform: scale(1.1);
         opacity: 0.8;
+        background: #6E9CFA;
+    }
+    .borrar:active, .pegar:active, .copiar:active{
+        transition: none;
+        transform: scale(1.1);
+        opacity: 0.8;
+        background: #343A40;
+        color: white;
     }
     .Texto-desencriptado{
         position: relative;
@@ -358,9 +378,8 @@ footer{
     .boton-pegar{
         float: none;
         position: absolute;
-        top:108.5px;
-        right: 0;
-        left: 134px;
+        top:15.5%;
+        left: 78%;
     }
     .pegar{
         width: 70px;
@@ -378,7 +397,8 @@ footer{
         font-weight: bold;
     }
     .contacto{
-        left: 76%;
+        left: 63%;
+        bottom: 64%;
     }
     .contacto div{
         width: 200%;
