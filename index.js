@@ -17,16 +17,18 @@ var verificador = false;
 function nopermitidos(texto){
     let nuevo = texto.toLowerCase(); //convierte todo el texto del textarea en minusculas
     let verificar = /[^a-zñ\s]/gi; //aca solo estan de la a-z
-    if(nuevo!= 0){
+    if(nuevo!=''){
         verificador= true;
+    }else{
+        verificador=false;
     }
-    return nuevo.replace(verificar, ""); //el comando replace... hace que primero verifique el texto dentro de la variable "nuevo" con verificar para ver si coincide.... si no coincide entonces lo reemplza por un espacio.
+    return nuevo.replace(verificar,''); //el comando replace... hace que primero verifique el texto dentro de la variable "nuevo" con verificar para ver si coincide.... si no coincide entonces lo reemplza por un espacio.
 }
 
 encriptar.addEventListener('input',function(){ //realiza un evento
     var texto = encriptar.value;
     encriptar.value = nopermitidos(texto);
-    if (encriptar.value==""){
+    if (encriptar.value==''){
         avisos.style.display="inline-block";
         copiar.style.display="none";
         pegar.style.display="inline-block";
@@ -42,18 +44,19 @@ botonencriptador.addEventListener('click', function(){
     if (verificador){
                 avisos.style.display="none";
                 copiar.style.display="inline-block";
+                return textoDesencriptado.value = texto1;
     }
-    return textoDesencriptado.value = texto1;
 });
 
 desencriptar.addEventListener('click',function(){
     let texto1 = decodificar();
-    let texto2 = "  "+texto1
     if (verificador){
         avisos.style.display="none";
         copiar.style.display="inline-block";
     }
-    return textoDesencriptado.value = texto2;
+    if(verificador==true){
+        return textoDesencriptado.value = texto1;
+    }
 })
 
 /*Funcion codificar del boton encriptar*/
@@ -126,6 +129,7 @@ pegar.addEventListener('click', async function(){
     const texto = await navigator.clipboard.readText();
     encriptar.value = texto;
     pegar.style.display="none";
+    verificador=true;
 });
 
 //comandos para borrar
@@ -135,4 +139,5 @@ borrar.addEventListener('click', function(){
     avisos.style.display="inline-block";
     copiar.style.display="none";
     pegar.style.display="inline-block";
+    verificador=false;
 });
