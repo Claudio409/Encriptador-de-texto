@@ -25,41 +25,8 @@ function nopermitidos(texto){
     return nuevo.replace(verificar,''); //el comando replace... hace que primero verifique el texto dentro de la variable "nuevo" con verificar para ver si coincide.... si no coincide entonces lo reemplza por un espacio.
 }
 
-encriptar.addEventListener('input',function(){ //realiza un evento
-    var texto = encriptar.value;
-    encriptar.value = nopermitidos(texto);
-    if (encriptar.value==''){
-        avisos.style.display="inline-block";
-        copiar.style.display="none";
-        pegar.style.display="inline-block";
-        return textoDesencriptado.value = texto;
-    }else{
-        pegar.style.display="none";
-    }
-});
 
-
-botonencriptador.addEventListener('click', function(){
-    let texto1 = codificar();
-    if (verificador){
-                avisos.style.display="none";
-                copiar.style.display="inline-block";
-                return textoDesencriptado.value = texto1;
-    }
-});
-
-desencriptar.addEventListener('click',function(){
-    let texto1 = decodificar();
-    if (verificador){
-        avisos.style.display="none";
-        copiar.style.display="inline-block";
-    }
-    if(verificador==true){
-        return textoDesencriptado.value = texto1;
-    }
-})
-
-/*Funcion codificar del boton encriptar*/
+/*Funcionalidad base codificar del boton encriptar y desencriptar*/
 function codificar(){
     let texto1 = encriptar.value;
     let remplazo = /[aeiou]/g;
@@ -106,6 +73,43 @@ function decodificar(){
     });
     return texto2;
 };
+
+//Revisa que en el textarea no haya caracteres no permitidos
+encriptar.addEventListener('input',function(){ 
+    var texto = encriptar.value;
+    encriptar.value = nopermitidos(texto);
+    if (encriptar.value==''){
+        avisos.style.display="inline-block";
+        copiar.style.display="none";
+        pegar.style.display="inline-block";
+        return textoDesencriptado.value = texto;
+    }else{
+        pegar.style.display="none";
+    }
+});
+
+//Funcionalidad de los botones encriptar y desencriptar
+botonencriptador.addEventListener('click', function(){
+    let texto1 = codificar();
+    if (verificador){
+                avisos.style.display="none";
+                copiar.style.display="inline-block";
+                return textoDesencriptado.value = texto1;
+    }
+});
+
+desencriptar.addEventListener('click',function(){
+    let texto1 = decodificar();
+    if (verificador){
+        avisos.style.display="none";
+        copiar.style.display="inline-block";
+    }
+    if(verificador==true){
+        return textoDesencriptado.value = texto1;
+    }
+})
+
+//Botón copiar
 
 copiar.addEventListener('click', function(){
     let texto = textoDesencriptado.value;
