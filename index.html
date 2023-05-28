@@ -21,27 +21,29 @@
         </header>
 
         <main>
-            <div class="boton-borrar">
-                <input type="submit" value="Borrar" class="borrar" id="borrar">
-            </div>
             <section class="texto-encriptado">
+                <section class="X-V">
+                    <div class="boton-borrar">
+                        <input type="submit" value="Borrar" class="borrar" id="borrar">
+                    </div>
+                    <div class ="boton-pegar">
+                        <input type="submit" value="Pegar" class="pegar" id="pegar">
+                    </div>
+                </section>
                 <textarea cols="35" rows="15" name="mensaje" id="mensaje"  required placeholder="Ingrese el texto aquí"></textarea>
                 <p><em class="danger">⚠</em> Solo acepta letras minúsculas y sin acentos</p>
+                <section class="botones-texto">
+                    <div class="boton-encriptar">
+                        <input type="submit" value="Encriptar" class="Encriptar" id="encriptar">
+                    </div>
+                    <div class="boton-desencriptar">
+                        <input type="submit" value="Desencriptar" class="Desencriptar" id="desencriptar">
+                    </div>
+                </section>
             </section>
-            <div class ="boton-pegar">
-                <input type="submit" value="Pegar" class="pegar" id="pegar">
-            </div>
-            <section class="botones-texto">
-                <div class="boton-encriptar">
-                    <input type="submit" value="Encriptar" class="Encriptar" id="encriptar">
-                </div>
-                <div class="boton-desencriptar">
-                    <input type="submit" value="Desencriptar" class="Desencriptar" id="desencriptar">
-                </div>
-            </section>
-            <section class="Texto-desencriptado">
+            <section class="Texto-desencriptado" id="Texto-desencriptado">
                 <textarea cols="30" rows="25" name="mensaje" id="mensaje-desencriptado" readonly></textarea>
-                <section id="avisos">
+                <section id="avisos" class="avisos">
                     <img src="imagenes/muñeco.png" class="muñeco" alt="Persona con una lupa">
                     <div class="aviso">
                         <p class="texto-arriba">Ningún mensaje fue encontrado</p>

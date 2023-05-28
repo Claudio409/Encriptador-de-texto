@@ -11,6 +11,7 @@ var textoDesencriptado= llamar('mensaje-desencriptado')
 var copiar = llamar('copiar');
 var pegar = llamar('pegar');
 var borrar = llamar('borrar');
+var espacioDesencriptado = llamar('Texto-desencriptado');
 var verificador = false; 
 
 //Para que el textarea solo admita minusculas 
@@ -82,6 +83,8 @@ encriptar.addEventListener('input',function(){
         avisos.style.display="inline-block";
         copiar.style.display="none";
         pegar.style.display="inline-block";
+        textoDesencriptado.style.display="none";
+        espacioDesencriptado.style.display="flex";
         return textoDesencriptado.value = texto;
     }else{
         pegar.style.display="none";
@@ -94,6 +97,8 @@ botonencriptador.addEventListener('click', function(){
     if (verificador){
                 avisos.style.display="none";
                 copiar.style.display="inline-block";
+                textoDesencriptado.style.display="inline-block";
+                espacioDesencriptado.style.display="grid";
                 return textoDesencriptado.value = texto1;
     }
 });
@@ -103,8 +108,8 @@ desencriptar.addEventListener('click',function(){
     if (verificador){
         avisos.style.display="none";
         copiar.style.display="inline-block";
-    }
-    if(verificador==true){
+        textoDesencriptado.style.display="inline-block";
+        espacioDesencriptado.style.display="grid";
         return textoDesencriptado.value = texto1;
     }
 })
@@ -143,5 +148,7 @@ borrar.addEventListener('click', function(){
     avisos.style.display="inline-block";
     copiar.style.display="none";
     pegar.style.display="inline-block";
+    textoDesencriptado.style.display="none";
+    espacioDesencriptado.style.display="flex";
     verificador=false;
 });
