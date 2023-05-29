@@ -153,8 +153,6 @@ pegar.addEventListener('click', async function(){
 
 //comandos para borrar
 borrar.addEventListener('click', function(){
-    encriptar.value="";
-    textoDesencriptado.value="";
     avisos.style.display="inline-block";
     copiar.style.display="none";
     pegar.style.display="inline-block";
@@ -164,5 +162,34 @@ borrar.addEventListener('click', function(){
     }else{
         espacioDesencriptado.style.display="inline-block";
     }
-    verificador=false;
+    if (verificador==true){
+        swal({
+            title: '¿Estás segur@?',
+            text: 'El texto borrado no se recupera',
+            icon: 'warning',
+            buttons: {
+                confirm: 'Sí',
+                cancel: 'No',
+            },
+            dangerMode: true,
+        })
+        .then((borrar) => {
+            if (borrar) {
+                encriptar.value="";
+                textoDesencriptado.value="";
+              swal({
+                title:'¡Listo!',
+                text: '¡Texto borrado!',
+                icon: "success",
+                button:'continuar',
+              });
+            } else {
+              swal({
+                title: "¡Proceso cancelado!",
+                button: 'seguir',
+            });
+            }
+          });
+    }
+      verificador=false;
 });
