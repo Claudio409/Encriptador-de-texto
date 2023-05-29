@@ -84,7 +84,11 @@ encriptar.addEventListener('input',function(){
         copiar.style.display="none";
         pegar.style.display="inline-block";
         textoDesencriptado.style.display="none";
-        espacioDesencriptado.style.display="flex";
+        if (window.innerWidth>912){
+            espacioDesencriptado.style.display="flex";
+        }else{
+            espacioDesencriptado.style.display="inline-block";
+        }
         return textoDesencriptado.value = texto;
     }else{
         pegar.style.display="none";
@@ -121,6 +125,12 @@ copiar.addEventListener('click', function(){
     let vacio = /  /g; //aquí se especifica que busque los dobles espacios
     texto = texto.replace(vacio, "");
     navigator.clipboard.writeText(texto);
+    swal({
+        title: '¡Listo!',
+        text: '¡Texto copiado con exito!',
+        icon: 'success',
+        button: 'Gracias',
+    });
 });
 
 //Funcionalidad del boton pegar
@@ -149,6 +159,10 @@ borrar.addEventListener('click', function(){
     copiar.style.display="none";
     pegar.style.display="inline-block";
     textoDesencriptado.style.display="none";
-    espacioDesencriptado.style.display="flex";
+    if (window.innerWidth>912){
+        espacioDesencriptado.style.display="flex";
+    }else{
+        espacioDesencriptado.style.display="inline-block";
+    }
     verificador=false;
 });

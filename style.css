@@ -339,14 +339,13 @@ footer{
         margin: 5px 0;
     }
     .Encriptar, .Desencriptar{
-        left: 0;
         width: 92%;
         margin: 0 4%;
     }
     .Encriptar:hover, .Desencriptar:hover, .borrar:hover, .pegar:hover, .copiar:hover{
         transition: none;
         transform: none;
-        opacity: none;
+        background: linear-gradient(45deg,#0A3871, darkgreen);
     }
     .copiar:hover{
         background: none;
@@ -356,7 +355,12 @@ footer{
         transition: none;
         transform: scale(1.1);
         opacity: 0.8;
-        background: #6E9CFA;
+    }
+    .Encriptar:active{
+        background: darkgreen;
+    }
+    .Desencriptar:active{
+        background: #0A3871;
     }
     .borrar:active, .pegar:active, .copiar:active{
         transition: none;
@@ -417,7 +421,6 @@ footer{
     }
     .boton-copiar{
         left: 25%;
-        top:82%;
     }
 }
 
@@ -476,4 +479,55 @@ footer{
         left:70%;
         bottom: 46%;
     }
+    .Encriptar:hover, .Desencriptar:hover, .borrar:hover, .pegar:hover, .copiar:hover{
+        transition: none;
+        transform: none;
+        background: linear-gradient(45deg,#0A3871, darkgreen);
+    }
+    .boton-copiar{
+        left: 24%;
+    }
+    .copiar:hover{
+        background: none;
+        color: #0A3871;
+    }
+    .Encriptar:active, .Desencriptar:active{
+        transition: none;
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    .Encriptar:active{
+        background: darkgreen;
+    }
+    .Desencriptar:active{
+        background: #0A3871;}
 }
+
+/*Acá comienza el estilo de la alerta de copiado*/
+.swal-modal{
+    border: 4px solid rgb(11 16 37 / 66%);
+    border-radius: 50px;
+    background: rgba(11, 16, 37);
+}
+.swal-title{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(40 201 141 / 87%);
+}
+.swal-text{
+    font-size: 25px;
+    color: rgb(159 174 228 / 89%);
+}
+.swal-icon--success::after, .swal-icon--success::before,.swal-icon--success__hide-corners{
+    background: rgb(11 16 37); 
+}
+.swal-icon--success{
+    border-color: rgb(88 231 8 / 100%);
+}
+.swal-icon--success__line{
+    background: rgb(88 231 8 / 90%);
+}
+.swal-icon--success__ring{
+    border: 4px solid hsla(0, 0%, 100%, 0.426);
+}
+
