@@ -1,7 +1,7 @@
 body{
     background: linear-gradient(201deg, #B8E280, #B8E9F8);
     display: grid;
-    grid-template-rows: 10% 69% 30%;
+    grid-template-rows: 10% 80% 10%;
 }
 
 /*Aca comienza el encabezado*/
@@ -154,18 +154,19 @@ h2{
     height: 93%;
     border-radius: 0.9em;
     font-size: 1.5em;
-}
-
-.Encriptar{
-    background-color: #0A3871;
-    /*Estilo del texto*/
-    color: #FFFFFF;
+    background: linear-gradient(45deg,#0A3871, darkgreen);
+    color:#D8DFE8 ;
 }
 
 .Encriptar:hover, .Desencriptar:hover{
-    transition: 500ms;
     transform: scale(1.05);
-    opacity: 0.9;
+    transition: 900ms;
+}
+.Encriptar:hover{
+    background: darkgreen;
+}
+.Desencriptar:hover{
+    background: #0A3871;
 }
 .copiar:hover{
     transition: 300ms;
@@ -175,11 +176,6 @@ h2{
     color: white;
 }
 
-
-.Desencriptar{
-    background: #D8DFE8;
-    color: #0A3871;
-}
 /*aca comienza el texto-desencritado*/
 .Texto-desencriptado{
     display: flex;
@@ -251,7 +247,6 @@ footer{
 }
 .pie{
     text-align: center;
-    /*background: url(imagenes/pie.jpg);*/
     background: linear-gradient(60deg, transparent 7%,  #75E0B0 9%,  #187B30 34%, #20503E 40%);
     box-shadow: 0 2px 7px darkgreen;
     padding: 10px;
@@ -264,6 +259,7 @@ footer{
 }
 .piee{
     width: 15%;
+    filter: brightness(0);
 }
 .copyright{
     color: #CCCCCC;
@@ -273,7 +269,7 @@ footer{
 /*Estilos de botones de contacto*/
 .contacto{
     display: flex;
-    max-width: 12%;
+    max-width: 8%;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
@@ -283,9 +279,9 @@ footer{
 
 
 .contacto div{
-    width: 70%;
+    width: 100%;
     background: #FFFFFF;
-    border: 4px solid black;
+    border: 2px solid black;
     border-radius: 10px;
     transition: 0.3s;
     box-sizing: border-box;
@@ -412,8 +408,9 @@ footer{
         margin: 0 0.3em;
     }
     .contacto{
-        left: 63%;
-        bottom: 64%;
+        max-width: 12%;
+        left: 70%;
+        bottom: 58%;
     }
     .contacto div{
         width: 200%;
@@ -473,5 +470,10 @@ footer{
     }
     .muñeco{
         display: none;
+    }
+    .contacto{
+        max-width: 13%;
+        left:70%;
+        bottom: 46%;
     }
 }
