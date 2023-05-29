@@ -302,10 +302,11 @@ footer{
     cursor: pointer;
 }
 
-/*Acá comienza los codigos para el celular*/
+/*Acá comienza los recursividad para el celular*/
 @media screen and (max-width:450px){
     .diseñoArriba, main{
         width: auto;
+        display: grid;
     }
     #mensaje{
         width: 90%;
@@ -367,7 +368,7 @@ footer{
         height: 250px;
         top: 0;
         right: 0;
-        margin: 5% 5% 3em 5%;
+        margin: 14% 5% 3em 5%;
         box-shadow: none;
         background: #F3F5FC;
     }
@@ -385,24 +386,23 @@ footer{
     }
     .boton-pegar{
         float: none;
-        position: absolute;
-        top:15.5%;
-        left: 78%;
+        position: relative;
+        top:36%;
+        left: 54%;
     }
     .pegar{
         width: 70px;
         font-size: 15px;
         padding: 4px;
     }
-    .aviso{
-        top: 28%;
+    .avisos{
+        left: 15%;
     }
     .texto-abajo{
-        margin: 22px 55px;
+        margin: 0.9em 0.6em;
     }
     .texto-arriba{
-        margin: 0 10px;
-        font-weight: bold;
+        margin: 0 0.3em;
     }
     .contacto{
         left: 63%;
@@ -414,5 +414,57 @@ footer{
     .boton-copiar{
         left: 25%;
         top:82%;
+    }
+}
+
+/*Recursividad para tablets*/
+@media screen and (min-width:451px) and (max-width:912px){
+    .diseñoArriba{
+        width: auto;
+    }
+    .logo{
+        margin: 0 0 0 1em;
+    }
+    .titulo{
+        left: 8%;
+    }
+    main{
+        width: auto;
+        display: grid;
+        margin: none;
+        justify-content: 0;
+        flex-direction: 0;
+        gap: 0;
+    }
+    .boton-pegar{
+        top:2em;
+        left: 65%;
+    }
+    .pegar{
+        padding: 0.8em;
+    }
+    #mensaje{
+        margin: 10px 5em 0 50px;
+    }
+    .Texto-desencriptado{
+        display: inline-block;
+        text-align: none;
+        width: 81%;
+        height: 66%;
+        margin: 3.5em auto 14em auto;
+    }
+    #mensaje-desencriptado{
+        height: 221px;
+        margin: 3% 2% 0 6%;
+    }
+    .avisos{
+        top: 28%;
+        left: 0;
+    }
+    .aviso{
+        margin: 0 13% 0 13%;
+    }
+    .muñeco{
+        display: none;
     }
 }
