@@ -1,12 +1,15 @@
 body{
-    background: #000000;
+    background: linear-gradient(201deg, #B8E280, #B8E9F8);
     display: grid;
+    grid-template-rows: 10% 69% 30%;
 }
 
 /*Aca comienza el encabezado*/
 .encabezado{
     padding: 20px 0;
-    background: url(imagenes/encabezado.jpg);
+    /*background: url(imagenes/encabezado.jpg);*/
+    background: linear-gradient(60deg, #20503E 36%, #187B30 75%, #75E0B0 93%, transparent 100%);
+    box-shadow: 0 2px 24px 3px black;
 }
 .diseñoArriba{
     width: 940px;
@@ -65,8 +68,8 @@ h2{
 .boton-pegar{
     float: right;
     position: relative;
-    top:14em;
-    left: 7em;    
+    top:16em;
+    left: 10em;    
 }
 .pegar{
     font-family: 'Oswald', sans-serif;
@@ -102,10 +105,12 @@ h2{
 
 #mensaje{
     font-family: 'Nunito', sans-serif;
+    border-radius: 5%;
     resize: none;
     border: none;
-    background: #000000;
-    margin: 10px 0 0 50px;
+    background:linear-gradient(201deg,rgb(28,79,31,0.3),rgb(184, 233, 248,0.3));
+    box-shadow: -2px 2px 15px 3px;
+    margin: 18px 0 7px 50px;
     font-size: 25px;
     font-weight: bold;
     color: darkgreen;
@@ -116,7 +121,7 @@ h2{
     font-family: 'Oswald', sans-serif;
     text-transform: none;
     font-size: 30px;
-    color: darkblue;
+    color: darkgreen;
 }
 
 #mensaje-desencriptado, #mensaje:focus { 
@@ -246,7 +251,9 @@ footer{
 }
 .pie{
     text-align: center;
-    background: url(imagenes/pie.jpg);
+    /*background: url(imagenes/pie.jpg);*/
+    background: linear-gradient(60deg, transparent 7%,  #75E0B0 9%,  #187B30 34%, #20503E 40%);
+    box-shadow: 0 2px 7px darkgreen;
     padding: 10px;
 }
 
