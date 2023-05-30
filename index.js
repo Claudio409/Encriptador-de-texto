@@ -86,8 +86,9 @@ encriptar.addEventListener('input',function(){
         textoDesencriptado.style.display="none";
         if (window.innerWidth>912){
             espacioDesencriptado.style.display="flex";
-        }else{
-            espacioDesencriptado.style.display="inline-block";
+        }
+        if (window.innerWidth<451){
+            espacioDesencriptado.style.display="flex";
         }
         return textoDesencriptado.value = texto;
     }else{
@@ -159,8 +160,9 @@ borrar.addEventListener('click', function(){
     textoDesencriptado.style.display="none";
     if (window.innerWidth>912){
         espacioDesencriptado.style.display="flex";
-    }else{
-        espacioDesencriptado.style.display="inline-block";
+    }
+    if (window.innerWidth<451){
+        espacioDesencriptado.style.display="flex";
     }
     if (verificador==true){
         swal({
@@ -188,8 +190,11 @@ borrar.addEventListener('click', function(){
                 title: "¡Proceso cancelado!",
                 button: 'seguir',
             });
+            verificador=true;
             }
           });
     }
       verificador=false;
 });
+
+

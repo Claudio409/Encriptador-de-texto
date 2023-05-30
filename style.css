@@ -325,6 +325,7 @@ footer{
     }
     .boton-borrar{
         width: 20%;
+        top:3px;
     }
     .texto-encriptado p{
         margin: 0 0 0 4%;
@@ -445,7 +446,7 @@ footer{
     }
     .boton-pegar{
         top:2em;
-        left: 65%;
+        left: 70%;
     }
     .pegar{
         padding: 0.8em;
