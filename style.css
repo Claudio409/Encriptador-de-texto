@@ -376,11 +376,12 @@ footer{
         transform: none;
         background:rgba(49, 71, 61, 0.903);
         color: white;
+        letter-spacing: 0px;
     }
     .Desencriptar:hover{
         background: rgba(255, 255, 255, 0.903);
         color: black;
-        transform: none;
+        letter-spacing: 0px;
     }
     .Encriptar:active, .Desencriptar:active{
         transform: scale(1.05) translateY(10px);
