@@ -153,20 +153,44 @@ h2{
     width: 90%;
     height: 93%;
     border-radius: 0.9em;
+    border: none;
     font-size: 1.5em;
-    background: linear-gradient(45deg,#0A3871, darkgreen);
-    color:#D8DFE8 ;
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,1);
 }
-
+.Encriptar{
+    background: rgba(49, 71, 61, 0.903);
+    color:#ffffff ;
+}
+.Desencriptar{
+    background: rgba(255, 255, 255, 0.903);
+    color: rgb(0, 0, 0);
+}
 .Encriptar:hover, .Desencriptar:hover{
     transform: scale(1.05);
-    transition: 900ms;
+    letter-spacing: 3px;
+    transition: all 0.5s ease;
+}
+.Encriptar:active, .Desencriptar:active{
+    transform: translateY(10px);
+    color: #000000;
+    transition: 100ms;
 }
 .Encriptar:hover{
-    background: darkgreen;
+    background: rgba(255, 255, 255, 0.903);
+    color: #000000;
 }
 .Desencriptar:hover{
-    background: #0A3871;
+    background: rgba(49, 71, 61, 0.903);
+    color: #FFFFFF;
+}
+.Encriptar:active{
+    background-color: rgba(49, 71, 61, 0.903);
+    color: white;
+}
+
+.Desencriptar:active{
+    background-color: rgba(255, 255, 255, 0.903);
+    color: black;
 }
 .copiar:hover{
     transition: 300ms;
@@ -343,25 +367,36 @@ footer{
         width: 92%;
         margin: 0 4%;
     }
-    .Encriptar:hover, .Desencriptar:hover, .borrar:hover, .pegar:hover, .copiar:hover{
+    .borrar:hover, .pegar:hover, .copiar:hover{
         transition: none;
         transform: none;
         background: linear-gradient(45deg,#0A3871, darkgreen);
     }
+    .Encriptar:hover{
+        transform: none;
+        background:rgba(49, 71, 61, 0.903);
+        color: white;
+    }
+    .Desencriptar:hover{
+        background: rgba(255, 255, 255, 0.903);
+        color: black;
+        transform: none;
+    }
+    .Encriptar:active, .Desencriptar:active{
+        transform: scale(1.05) translateY(10px);
+        transition: 100ms;
+    }
+    .Encriptar:active{
+        background: rgba(255, 255, 255, 0.903);
+        color: #000000;
+    }
+    .Desencriptar:active{
+        background:rgba(49, 71, 61, 0.903);
+        color: white;
+    }
     .copiar:hover{
         background: none;
         color: #0A3871;
-    }
-    .Encriptar:active, .Desencriptar:active{
-        transition: none;
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
-    .Encriptar:active{
-        background: darkgreen;
-    }
-    .Desencriptar:active{
-        background: #0A3871;
     }
     .borrar:active, .pegar:active, .copiar:active{
         transition: none;
